@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f2f5fb;
+  color: #263452;
+}
+
+/* LOGIN PAGE */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg,
+      #bcebd8,
+      #dce7ff,
+      #f5d9e9);
+}
+
+.login-card {
+  background: white;
+  padding: 35px;
+  width: 390px;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px #243c601c;
+  animation: fadeIn .6s ease;
+}
+
+.login-card h1 {
+  text-align: center;
+  color: #3d579e;
+  font-size: 27px;
+}
+
+.login-card>p {
+  text-align: center;
+  color: #8994a8;
+  font-size: 12px;
+  margin: 10px 0 25px;
+}
+
+.login-card label {
+  display: block;
+  font-size: 12px;
+  margin: 15px 0 7px;
+}
+
+.login-card input,
+.login-card select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dce2ef;
+  border-radius: 8px;
+}
+
+.demo {
+  background: #eff4ff;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-size: 11px;
+  line-height: 2;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+/* MAIN LAYOUT */
+
+.layout {
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 245px;
+  height: 100vh;
+  position: fixed;
+  background: linear-gradient(180deg,
+      #14264b,
+      #304b82);
+  color: white;
+  padding: 25px 17px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 21px;
+}
+
+.user {
+  padding: 14px;
+  background: #ffffff20;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.user h4 {
+  font-size: 13px;
+}
+
+.user p {
+  color: #bdccef;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 10px;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  color: #d8e2f6;
+  padding: 13px;
+  border-radius: 9px;
+  font-size: 13px;
+  transition: .3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background: #ffffff30;
+  transform: translateX(4px);
+}
+
+.logout {
+  margin-top: auto;
+  background: #e65368;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.main {
+  margin-left: 245px;
+  min-height: 100vh;
+}
+
+.topbar {
+  height: 75px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  border-bottom: 1px solid #e9edf5;
+}
+
+.topbar h2 {
+  color: #344b80;
+  font-size: 17px;
+}
+
+.topbar span {
+  font-size: 11px;
+  color: #8290a7;
+}
+
+/* PAGE */
+
+.page {
+  padding: 30px;
+  animation: fadeIn .4s ease;
+}
+
+.page h1 {
+  font-size: 25px;
+  color: #344b80;
+  margin-bottom: 8px;
+}
+
+.page>p {
+  font-size: 12px;
+  color: #8490a6;
+  margin-bottom: 25px;
+}
+
+/* DASHBOARD */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.stat-card {
+  background: white;
+  padding: 22px;
+  border-radius: 13px;
+  box-shadow: 0 5px 20px #263c650b;
+  transition: .3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h2 {
+  font-size: 26px;
+  margin-bottom: 7px;
+}
+
+.stat-card p {
+  font-size: 12px;
+  color: #7e8ba4;
+}
+
+.blue h2 {
+  color: #5369d8;
+}
+
+.green h2 {
+  color: #18a47e;
+}
+
+.orange h2 {
+  color: #e59a45;
+}
+
+.purple h2 {
+  color: #9064cf;
+}
+
+/* PANELS */
+
+.dashboard-panel {
+  background: white;
+  padding: 23px;
+  margin-bottom: 22px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px #263c650b;
+}
+
+.dashboard-panel h2 {
+  font-size: 16px;
+  margin-bottom: 18px;
+  color: #3d5288;
+}
+
+/* BUTTONS */
+
+.primary-btn {
+  background: linear-gradient(120deg,
+      #5369d8,
+      #8067ce);
+  color: white;
+  border: none;
+  border-radius: 9px;
+  padding: 12px 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px #5369d855;
+}
+
+/* FORMS */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+input,
+select {
+  padding: 11px;
+  border: 1px solid #dce2ee;
+  border-radius: 8px;
+  outline: none;
+  max-width: 100%;
+}
+
+input:focus,
+select:focus {
+  border-color: #657de1;
+}
+
+/* TABLES */
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 18px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+th {
+  background: #edf2ff;
+  color: #405995;
+  padding: 13px;
+  text-align: left;
+  font-size: 11px;
+}
+
+td {
+  padding: 13px;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 11px;
+}
+
+tr:hover td {
+  background: #f8faff;
+}
+
+/* RECORDS */
+
+.record {
+  padding: 14px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 12px;
+}
+
+/* REPORTS */
+
+.report {
+  margin-top: 25px;
+}
+
+.report-header {
+  padding: 15px 0;
+  border-bottom: 1px solid #e9edf5;
+  margin-bottom: 20px;
+}
+
+.report h2 {
+  color: #5369d8;
+}
+
+.report h3 {
+  margin: 15px 0;
+}
+
+.report p {
+  font-size: 12px;
+  margin: 8px 0;
+  color: #78859c;
+}
+
+/* CHARTS */
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* PRINT */
+
+@media print {
+
+  .sidebar,
+  .topbar,
+  .no-print {
+    display: none !important;
+  }
+
+  .main {
+    margin: 0;
+  }
+
+  .page {
+    padding: 0;
+  }
+
+  .dashboard-panel {
+    box-shadow: none;
+  }
+}
+
+/* MOBILE */
+
+@media(max-width: 1000px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 700px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .sidebar nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .sidebar nav a {
+    padding: 9px;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+
+  .topbar {
+    padding: 15px;
+  }
+
+  .page {
+    padding: 18px;
+  }
+
+  .stats-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar span {
+    display: none;
+  }
+}
